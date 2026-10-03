@@ -44,10 +44,10 @@
                 
                 <!-- MAIN BRAND LOGO -->
                 <div class="flex-shrink-0 flex items-center">
-                    <!-- CHANGE "logo.png" TO YOUR ACTUAL LOGO FILE NAME -->
                     <img src="a0c6d334-b5bc-4cd2-9f14-08dba5311b93.jpeg" alt="StoneWave Logo" class="h-10 w-auto">
                 </div>
                 
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
                     <a href="#services" class="text-gray-600 hover:text-emerald font-semibold transition-colors">Services</a>
                     <a href="#reviews" class="text-gray-600 hover:text-emerald font-semibold transition-colors">Reviews</a>
@@ -56,15 +56,32 @@
                 <div class="hidden md:flex">
                     <a href="#contact" class="bg-navy text-white px-6 py-2 rounded-md font-semibold hover:bg-emerald transition-colors">B2B Portal</a>
                 </div>
+
+                <!-- Mobile Menu Button (Hamburger) -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-navy hover:text-emerald focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="#services" class="mobile-link block px-3 py-3 text-gray-600 hover:text-emerald hover:bg-gray-50 font-semibold rounded-md">Services</a>
+                <a href="#reviews" class="mobile-link block px-3 py-3 text-gray-600 hover:text-emerald hover:bg-gray-50 font-semibold rounded-md">Reviews</a>
+                <a href="#pricing" class="mobile-link block px-3 py-3 text-gray-600 hover:text-emerald hover:bg-gray-50 font-semibold rounded-md">Service Area</a>
+                <a href="#contact" class="mobile-link block px-3 py-3 mt-4 text-center bg-navy text-white rounded-md font-semibold hover:bg-emerald transition-colors">B2B Portal</a>
             </div>
         </div>
     </nav>
 
-    <!-- Top Section: Hero Image Carousel -->
-    <header id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <!-- Top Section: Hero Image Carousel (Adjusted height for mobile) -->
+    <header id="home" class="relative h-[50vh] md:h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
         
         <!-- Image Carousel Container -->
-        <div class="absolute inset-0 w-full h-full bg-navy z-0">
+        <div class="absolute inset-0 w-full h-full bg-navy z-0 mt-20 md:mt-0">
             <!-- Slide 1 -->
             <img src="IMG_5509.png" alt="Cleaning Service 1" class="carousel-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100">
             
@@ -80,72 +97,71 @@
     </header>
 
     <!-- Second Section: Licensed Brand Logo & Trust Badges -->
-    <section class="py-12 bg-white border-b border-gray-100">
+    <section class="py-10 md:py-12 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-8">
-                <p class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Licensed By & Certified To The Highest Standards</p>
+            <div class="text-center mb-6 md:mb-8">
+                <p class="text-xs md:text-sm font-semibold text-gray-400 uppercase tracking-wider">Licensed By & Certified To The Highest Standards</p>
             </div>
-            <div class="flex flex-wrap justify-center items-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12 opacity-80 md:opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
                 
                 <!-- LICENSED BRAND LOGO -->
-                <!-- CHANGE "brand-logo.png" TO YOUR ACTUAL LOGO FILE NAME -->
-                <img src="a0c6d334-b5bc-4cd2-9f14-08dba5311b93.jpeg" alt="Licensed Brand Logo" class="h-12 w-auto object-contain">
+                <img src="a0c6d334-b5bc-4cd2-9f14-08dba5311b93.jpeg" alt="Licensed Brand Logo" class="h-10 md:h-12 w-auto object-contain">
                 
                 <!-- Trust Badges -->
-                <div class="flex items-center space-x-2 font-bold text-gray-600"><i class="fa-solid fa-certificate text-emerald text-xl"></i><span>ISO Certified</span></div>
-                <div class="flex items-center space-x-2 font-bold text-gray-600"><i class="fa-solid fa-shield-halved text-emerald text-xl"></i><span>CPAN Accredited</span></div>
-                <div class="flex items-center space-x-2 font-bold text-gray-600"><i class="fa-solid fa-globe text-emerald text-xl"></i><span>ISSA Member</span></div>
+                <div class="flex items-center space-x-2 font-bold text-gray-600 text-sm md:text-base"><i class="fa-solid fa-certificate text-emerald text-lg md:text-xl"></i><span>ISO Certified</span></div>
+                <div class="flex items-center space-x-2 font-bold text-gray-600 text-sm md:text-base"><i class="fa-solid fa-shield-halved text-emerald text-lg md:text-xl"></i><span>CPAN Accredited</span></div>
+                <div class="flex items-center space-x-2 font-bold text-gray-600 text-sm md:text-base"><i class="fa-solid fa-globe text-emerald text-lg md:text-xl"></i><span>ISSA Member</span></div>
             </div>
         </div>
     </section>
 
     <!-- Third Section: Specialized Category Gateways -->
-    <section id="services" class="py-20 bg-champagne">
+    <section id="services" class="py-16 md:py-20 bg-champagne">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-12 md:mb-16">
                 <h2 class="text-3xl md:text-4xl font-serif font-bold text-navy mb-4">Dedicated Service Solutions</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Click the specific button below that matches your exact cleaning challenge.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 
                 <!-- Category 1 -->
-                <a href="/services/residential-deep-clean" class="block bg-white rounded-xl p-8 hover-lift border-t-4 border-emerald group">
-                    <div class="w-14 h-14 bg-emerald/10 rounded-lg flex items-center justify-center text-emerald text-2xl mb-6 group-hover:bg-emerald group-hover:text-white transition-colors">
+                <a href="/services/residential-deep-clean" class="block bg-white rounded-xl p-6 md:p-8 hover-lift border-t-4 border-emerald group shadow-sm">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-emerald/10 rounded-lg flex items-center justify-center text-emerald text-xl md:text-2xl mb-4 md:mb-6 group-hover:bg-emerald group-hover:text-white transition-colors">
                         <i class="fa-solid fa-house"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-navy mb-3">Residential Deep & Move-In</h3>
-                    <p class="text-gray-600 text-sm mb-6">Moving into a new home or need deep furniture & kitchen sanitization.</p>
+                    <h3 class="text-lg md:text-xl font-bold text-navy mb-2 md:mb-3">Residential Deep & Move-In</h3>
+                    <p class="text-gray-600 text-sm mb-4 md:mb-6">Moving into a new home or need deep furniture & kitchen sanitization.</p>
                     <span class="text-emerald font-semibold text-sm flex items-center">View Details <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i></span>
                 </a>
 
                 <!-- Category 2 -->
-                <a href="/services/post-construction" class="block bg-white rounded-xl p-8 hover-lift border-t-4 border-navy group">
-                    <div class="w-14 h-14 bg-navy/10 rounded-lg flex items-center justify-center text-navy text-2xl mb-6 group-hover:bg-navy group-hover:text-white transition-colors">
+                <a href="/services/post-construction" class="block bg-white rounded-xl p-6 md:p-8 hover-lift border-t-4 border-navy group shadow-sm">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-navy/10 rounded-lg flex items-center justify-center text-navy text-xl md:text-2xl mb-4 md:mb-6 group-hover:bg-navy group-hover:text-white transition-colors">
                         <i class="fa-solid fa-trowel-bricks"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-navy mb-3">Post-Construction Clean</h3>
-                    <p class="text-gray-600 text-sm mb-6">Dealing with post-build dust, paint splatter, cement residue, or debris?</p>
+                    <h3 class="text-lg md:text-xl font-bold text-navy mb-2 md:mb-3">Post-Construction Clean</h3>
+                    <p class="text-gray-600 text-sm mb-4 md:mb-6">Dealing with post-build dust, paint splatter, cement residue, or debris?</p>
                     <span class="text-navy font-semibold text-sm flex items-center">View Details <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i></span>
                 </a>
 
                 <!-- Category 3 -->
-                <a href="/services/corporate-janitorial" class="block bg-white rounded-xl p-8 hover-lift border-t-4 border-emerald group">
-                    <div class="w-14 h-14 bg-emerald/10 rounded-lg flex items-center justify-center text-emerald text-2xl mb-6 group-hover:bg-emerald group-hover:text-white transition-colors">
+                <a href="/services/corporate-janitorial" class="block bg-white rounded-xl p-6 md:p-8 hover-lift border-t-4 border-emerald group shadow-sm">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-emerald/10 rounded-lg flex items-center justify-center text-emerald text-xl md:text-2xl mb-4 md:mb-6 group-hover:bg-emerald group-hover:text-white transition-colors">
                         <i class="fa-solid fa-building"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-navy mb-3">Corporate Office Retainers</h3>
-                    <p class="text-gray-600 text-sm mb-6">Facility manager looking for daily janitorial retainers, SLAs, and HSE plans?</p>
+                    <h3 class="text-lg md:text-xl font-bold text-navy mb-2 md:mb-3">Corporate Office Retainers</h3>
+                    <p class="text-gray-600 text-sm mb-4 md:mb-6">Facility manager looking for daily janitorial retainers, SLAs, and HSE plans?</p>
                     <span class="text-emerald font-semibold text-sm flex items-center">View Details <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i></span>
                 </a>
 
                 <!-- Category 4 -->
-                <a href="/services/industrial-restoration" class="block bg-white rounded-xl p-8 hover-lift border-t-4 border-navy group">
-                    <div class="w-14 h-14 bg-navy/10 rounded-lg flex items-center justify-center text-navy text-2xl mb-6 group-hover:bg-navy group-hover:text-white transition-colors">
+                <a href="/services/industrial-restoration" class="block bg-white rounded-xl p-6 md:p-8 hover-lift border-t-4 border-navy group shadow-sm">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-navy/10 rounded-lg flex items-center justify-center text-navy text-xl md:text-2xl mb-4 md:mb-6 group-hover:bg-navy group-hover:text-white transition-colors">
                         <i class="fa-solid fa-gem"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-navy mb-3">Industrial & Restoration</h3>
-                    <p class="text-gray-600 text-sm mb-6">Need marble honing, high-rise glass washing, fumigation, or forensic cleaning?</p>
+                    <h3 class="text-lg md:text-xl font-bold text-navy mb-2 md:mb-3">Industrial & Restoration</h3>
+                    <p class="text-gray-600 text-sm mb-4 md:mb-6">Need marble honing, high-rise glass washing, fumigation, or forensic cleaning?</p>
                     <span class="text-navy font-semibold text-sm flex items-center">View Details <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i></span>
                 </a>
 
@@ -154,16 +170,16 @@
     </section>
 
     <!-- Fourth Section: Client Reviews & Social Proof -->
-    <section id="reviews" class="py-20 bg-white">
+    <section id="reviews" class="py-16 md:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-12 md:mb-16">
                 <h2 class="text-3xl md:text-4xl font-serif font-bold text-navy mb-4">Trusted Across Sectors</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">See why verified luxury residential clients and B2B corporate partners rely on our expertise.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <!-- Review 1: Residential -->
-                <div class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100">
+                <div class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
                     <div class="flex text-yellow-400 text-sm mb-4">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
@@ -178,7 +194,7 @@
                 </div>
 
                 <!-- Review 2: Post-Construction -->
-                <div class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100">
+                <div class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
                     <div class="flex text-yellow-400 text-sm mb-4">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
@@ -193,7 +209,7 @@
                 </div>
 
                 <!-- Review 3: Corporate -->
-                <div class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100">
+                <div class="bg-gray-50 p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
                     <div class="flex text-yellow-400 text-sm mb-4">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
@@ -213,10 +229,10 @@
     <!-- Bottom Section: Global Footer & Instant Contact -->
     <footer id="pricing" class="bg-navy text-white pt-16 pb-8 border-t-4 border-emerald">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 border-b border-gray-700 pb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12 border-b border-gray-700 pb-12">
                 
                 <!-- Location-Based Pricing Tool -->
-                <div class="bg-white/5 rounded-xl p-8 border border-white/10 backdrop-blur">
+                <div class="bg-white/5 rounded-xl p-6 md:p-8 border border-white/10 backdrop-blur">
                     <h3 class="text-xl font-bold mb-2">Location-Based Dynamic Pricing</h3>
                     <p class="text-gray-300 text-sm mb-6">Select your region to establish baseline costs and check same-day dispatch availability.</p>
                     <form class="space-y-4">
@@ -235,7 +251,7 @@
                 </div>
 
                 <!-- Footer Navigation -->
-                <div class="grid grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div>
                         <h4 class="text-lg font-bold mb-4">Quick Links</h4>
                         <ul class="space-y-2 text-sm text-gray-400">
@@ -262,14 +278,31 @@
         </div>
     </footer>
 
-    <!-- Persistent Floating WhatsApp Trigger -->
-    <a href="https://wa.me/7060620964?text=Hello,%20I%20am%20on%20your%20website%20and%20I%20need%20help%20with%20a%20cleaning%20situation..." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 hover:-translate-y-2 transition-all z-50 animate-bounce">
+    <!-- Persistent Floating WhatsApp Trigger (Resized for Mobile) -->
+    <a href="https://wa.me/7060620964?text=Hello,%20I%20am%20on%20your%20website%20and%20I%20need%20help%20with%20a%20cleaning%20situation..." target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-[#25D366] text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-2xl md:text-3xl shadow-2xl hover:scale-110 hover:-translate-y-2 transition-all z-50 animate-bounce">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- Carousel Script -->
+    <!-- Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // 1. Mobile Menu Toggle Logic
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close the mobile menu automatically when a user taps a link
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // 2. Carousel Logic
             const slides = document.querySelectorAll('.carousel-slide');
             let currentSlide = 0;
 
